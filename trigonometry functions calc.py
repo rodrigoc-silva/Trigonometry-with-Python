@@ -35,15 +35,44 @@ class TrigFunctionCalc:
         return math.sqrt(pow(self._x_coordinate, 2)+pow(self._y_coordinate, 2))
 
 
-def main():
+    def getSen(self):
+        return self._y_coordinate / self.getHypotenuse()
 
+
+    def getCos(self):
+        return self._x_coordinate / self.getHypotenuse()
+
+
+    def getTan(self):
+        return self._y_coordinate / self._x_coordinate
+
+
+    def getCsc(self):
+        return self.getHypotenuse() / self._y_coordinate
+
+
+    def getSec(self):
+        return self.getHypotenuse() / self._x_coordinate
+
+
+    def getCot(self):
+        return self._x_coordinate / self._y_coordinate
+
+
+def main():
+    #ask for the user the x and y coordinates
     x_coord = float(input('Enter the X coordinate: '))
 
     y_coord = float(input('Enter the Y coordinate: '))
 
-    coord1 = TrigFunctionCalc(x_coord, y_coord)
+    trig_function_calc = TrigFunctionCalc(x_coord, y_coord)
 
-    print(coord1.getHypotenuse())
+    print('Sen:', format(trig_function_calc.getSen(), '.2f'))
+    print('Cos:', format(trig_function_calc.getCos(), '.2f'))
+    print('Tan:', format(trig_function_calc.getTan(), '.2f'))
+    print('Csc:', format(trig_function_calc.getCsc(), '.2f'))
+    print('Sec:', format(trig_function_calc.getSec(), '.2f'))
+    print('Cot:', format(trig_function_calc.getCot(), '.2f'))
 
 
 if __name__=="__main__":
