@@ -35,7 +35,7 @@ class TrigFunctionCalc:
         return math.sqrt(pow(self._x_coordinate, 2)+pow(self._y_coordinate, 2))
 
 
-    def getSen(self):
+    def getSin(self):
         return self._y_coordinate / self.getHypotenuse()
 
 
@@ -67,7 +67,7 @@ def main():
 
     trig_function_calc = TrigFunctionCalc(x_coord, y_coord)
 
-    print('Sen:', format(trig_function_calc.getSen(), '.2f'))
+    print('Sin:', format(trig_function_calc.getSin(), '.2f'))
     print('Cos:', format(trig_function_calc.getCos(), '.2f'))
     print('Tan:', format(trig_function_calc.getTan(), '.2f'))
     print('Csc:', format(trig_function_calc.getCsc(), '.2f'))
